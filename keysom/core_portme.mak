@@ -7,7 +7,7 @@ endif
 RVARCH:=rv32imc
 
 LIBS =                                                        \
-  $(TOOLCHAIN_ROOT)/lib/clang/21/lib/riscv32-keysom-none-elf/libclang_rt.builtins.a \
+  $(TOOLCHAIN_ROOT)/lib/keysom/libclang_rt.builtins-riscv32.a \
   $(TOOLCHAIN_ROOT)/picolibc/rv32-keysom/lib/libc.a           \
   $(TOOLCHAIN_ROOT)/picolibc/rv32-keysom/lib/crt0-semihost.o
 

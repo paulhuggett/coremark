@@ -72,15 +72,15 @@ SECTIONS {
     *(.data.rel.ro .data.rel.ro.*)
   } > ram
 
-  /* Thread Local Storage sections  */
-  .tdata : { *(.tdata .tdata.* .gnu.linkonce.td.*) }
-  .tbss  : { *(.tbss .tbss.* .gnu.linkonce.tb.*) *(.tcommon) }
-  __tls_base = ADDR(.tdata);
-
   .got : {
     *(.got.plt)
     *(.got)
   } > ram
+
+/* Thread Local Storage sections  */
+  .tdata : { *(.tdata .tdata.* .gnu.linkonce.td.*) }
+  .tbss  : { *(.tbss .tbss.* .gnu.linkonce.tb.*) *(.tcommon) }
+  __tls_base = ADDR(.tdata);
 
   .toc : {
     *(.toc .toc.*)
